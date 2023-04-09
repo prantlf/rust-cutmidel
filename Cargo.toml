@@ -1,0 +1,16 @@
+[package]
+name = "cutmidel"
+version = "1.0.0"
+edition = "2021"
+
+[[bin]]
+name = "cutmidel"
+path = "cutmidel.rs"
+
+[profile.release]
+codegen-units = 4
+lto = true
+overflow-checks = false
+strip = 'symbols'
+
+[dependencies]
